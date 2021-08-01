@@ -1,10 +1,11 @@
 import axios from 'axios'
 import Head from 'next/head'
+import MainLayout from '../../components/MainLayout'
 
 export default function Home ({ posts }) {
   if(!posts) return null
   return (
-    <div className>
+    <MainLayout>
       <Head>
         <meta name="Next test" content="Next, test, reactjs"/>
         <title>Next js test page</title>
@@ -16,7 +17,7 @@ export default function Home ({ posts }) {
           <p className="text-gray-400">{ item.body }</p>
         </div>
       ))}
-    </div>
+    </MainLayout>
   )
 }
 

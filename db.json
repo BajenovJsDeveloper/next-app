@@ -1,0 +1,10 @@
+{
+  "users": [
+    {"id": 1, "name": "Vasilii", "about": "Graphic Designer", "age": 20},
+    {"id": 2, "name": "Iurrii", "about": "JavasCript programmer", "age": 23},
+    {"id": 3, "name": "Xenia", "about": "HR Manager", "age": 28},
+    {"id": 4, "name": "Ruslan", "about": "Team Lead", "age": 22},
+    {"id": 5, "name": "Ivan", "about": "Graphic Designer", "age": 27},
+    {"id": 6, "name": "Evghenii", "about": "Backend programmer", "age": 19}
+  ]
+}
