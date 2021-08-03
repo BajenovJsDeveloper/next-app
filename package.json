@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "db": "json-server -w db.json -p 4200 -d 500",
+    "db": "json-server -w db.json -p 4200 -d 1000",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -13,8 +13,11 @@
   "dependencies": {
     "axios": "^0.21.1",
     "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "nprogress": "^0.2.0",
+    "react": "^16.8",
+    "react-dom": "^16.8",
+    "react-is": "^16.8",
+    "styled-components": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",

@@ -1,13 +1,13 @@
 import { useRouter } from "next/router"
-import Link from 'next/link'
 import MainLayout from "../../components/MainLayout"
+import { withLoading } from "../../utils/hooks"
 
-export default function Users ({users}) {
+function Users ({users, loading}) {
   const router = useRouter()
   const handleClick = (id) => {
     router.push(`/users/${id}`)
+    loading(true)
   }
-
   return (
     <MainLayout>
       <h1 className="text-2xl"></h1>
@@ -31,7 +31,7 @@ export default function Users ({users}) {
   )
 }
 
-export async function getServerSideProps (context) { 
+export async function getStaticProps() {
   const res = await fetch('http://localhost:4200/users')
   const users = await res.json()
   console.log('Uesers: ', users)
@@ -41,3 +41,5 @@ export async function getServerSideProps (context) {
     }
   }
 }
+
+export default withLoading(Users)
